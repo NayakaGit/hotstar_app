@@ -44,7 +44,7 @@ resource "aws_instance" "Monitoring_server" {
 ami = "ami-0e35ddab05955cf57"  
 instance_type = "t2.medium"
 security_groups = [aws_security_group.ec2_security_group.name]
-key_name = mumbai.key_name
+key_name = var.key_name
 tags = {
   Name: var.instance_name
 }
